@@ -16,3 +16,17 @@ fetch('http://localhost:3000/robots')
         `
         })
     })
+
+let nav = document.querySelector("nav")
+window.addEventListener("scroll" , ()=>{
+    if(window.scrollY >100){
+        nav.style.background = "#8a90ff"
+        nav.style.opacity = ".9"
+        nav.style.padding = "10px 0px"
+    }
+    else{
+        nav.style.background = ""
+        nav.style.opacity = ""
+        nav.style.padding = "20px 0px"
+    }
+})

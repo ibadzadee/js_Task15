@@ -1,11 +1,11 @@
 let id = new URLSearchParams(window.location.search).get("id");
 
-console.log(id);
+let element = document.querySelector(".element")
 
 fetch(`http://localhost:3000/robots/${id}`)
     .then(reponse => reponse.json())
     .then(data => {
-        document.body.innerHTML += `
+        element.innerHTML += `
         <div class="card cardDetails">
         <img src="${data.image}" alt="">
             <div class="bottom">
@@ -15,4 +15,19 @@ fetch(`http://localhost:3000/robots/${id}`)
             </div>
         </div> 
         `
+})
+
+let nav = document.querySelector("nav")
+nav.style.background = "#8a90ff"
+window.addEventListener("scroll" , ()=>{
+    if(window.scrollY >100){
+        nav.style.background = "#8a90ff"
+        nav.style.opacity = ".9"
+        nav.style.padding = "10px 0px"
+    }
+    else{
+        nav.style.background = "#8a90ff"
+        nav.style.opacity = ""
+        nav.style.padding = ""
+    }
 })

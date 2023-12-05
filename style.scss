@@ -30,22 +30,17 @@
 
 nav {
     width: 100%;
-    // background-color: $back-color;
     padding: 20px 0px;
     position: fixed;
     z-index: 100;
-    // opacity: 0.7;
+    transition: all 0.7s ease;
 
     .nav-center {
         width: 100%;
         @include display(space-between, center);
         flex-wrap: wrap;
-        // z-index: 200;
 
         .menu {
-
-            // width: 100%;
-            // @include display;
             ul {
                 display: flex;
                 gap: 20px;
@@ -70,7 +65,6 @@ nav {
     width: 100%;
     background-image: url(./robots\ image/banner-bg.jpg.webp);
     padding: 190px 0px;
-    // height: 100vh;
     @include image;
 
     .banner-center {
@@ -97,7 +91,7 @@ nav {
         button {
             padding: 12px 32px;
             font-weight: 500;
-            border: none;
+            border: 1px solid white;
             cursor: pointer;
             background-color: white;
 
@@ -131,13 +125,15 @@ nav {
         gap: 100px;
 
         .top {
+            width: 100%;
             @include display;
             flex-direction: column;
             gap: 20px;
 
             h2 {
-                font-size: 40px;
+                font-size: 2.5rem;
                 font-weight: 500;
+                text-align: center;
             }
 
             p {
@@ -155,7 +151,7 @@ nav {
                 @include display(center, center);
                 flex-direction: column;
                 text-align: center;
-                box-shadow: 0px 0px 50px 10px $light-white;
+                box-shadow: 0px 0px 50px 20px $light-white;
                 border-top-left-radius: 20px;
                 border-top-right-radius: 20px;
 
@@ -171,19 +167,35 @@ nav {
                     @include display;
                     flex-direction: column;
                     padding: 20px;
-                    background-color: lightcyan;
+                    background-color: $light-white;
+
+                    a {
+                        color: black;
+                        font-weight: 600;
+                    }
+
+                    h5 {
+                        font-size: 20px;
+                    }
+
+                    p {
+                        color: $gray;
+                    }
 
                     button {
                         padding: 12px 32px;
                         font-weight: 500;
                         background-color: white;
-                        border: none;
+                        border: 1px solid white;
                         cursor: pointer;
 
                         &:hover {
                             background-image: -webkit-linear-gradient(0deg, #828fff 0%, #d496ff 100%);
-                            transition: all 0.4s ease;
+                        }
+
+                        &:hover a {
                             color: white;
+                            transition: all 0.4s ease;
                         }
                     }
                 }
@@ -210,7 +222,6 @@ nav {
         @include display(center, flex-start);
         flex-direction: column;
         width: 35%;
-        // max-width: 30%;
         margin: 0 auto;
         gap: 20px;
 
@@ -226,7 +237,7 @@ nav {
             padding: 12px 32px;
             font-weight: 500;
             background-image: -webkit-linear-gradient(0deg, #828fff 0%, #d496ff 100%);
-            border: none;
+            border: 1px solid white;
             cursor: pointer;
             color: white;
 
@@ -273,7 +284,7 @@ nav {
                 padding: 15px 32px;
                 font-weight: 500;
                 background-image: -webkit-linear-gradient(0deg, #828fff 0%, #d496ff 100%);
-                border: none;
+                border: 1px solid white;
                 cursor: pointer;
                 color: white;
 
@@ -314,7 +325,6 @@ nav {
     padding: 100px 0px;
     background-image: url(./robots\ image/pink-bg.jpg);
 
-    // @include display;
     .pink-center {
         width: 100%;
         @include display;
@@ -337,7 +347,6 @@ nav {
             width: 100%;
             display: grid;
             grid-template-columns: repeat(3, auto);
-            // grid-template-rows: repeat(2, auto);
             gap: 30px;
 
             .card {
@@ -377,22 +386,33 @@ nav {
 #sec6 {
     width: 100%;
     padding: 100px 0px;
-    overflow-x: scroll;
+    // overflow-x: scroll;
 
     .sec6-center {
         width: 100%;
         display: grid;
         grid-template-columns: repeat(5, auto);
-        gap: 50px;
+
         .imgs {
-            width: 19%;
+            width: 100%;
+
+            img {
+                width: 60%;
+                filter: grayscale(100%);
+
+                &:hover {
+                    filter: grayscale(0%);
+                    transition: all 0.4s ease;
+                }
+            }
         }
     }
 }
 
 #sec7 {
     width: 100%;
-    padding: 50px 0px;
+    padding-top: 50px;
+    padding-bottom: 100px;
 
     .sec7-center {
         width: 100%;
@@ -401,10 +421,172 @@ nav {
             @include display;
             flex-direction: column;
             gap: 20px;
+            padding-bottom: 50px;
 
             h2 {
                 font-size: 40px;
                 font-weight: 500;
+            }
+        }
+
+        .bottom {
+            width: 100%;
+            @include display;
+            gap: 30px;
+
+            .cards {
+                @include display(center, flex-start);
+                flex-direction: column;
+                gap: 15px;
+
+                img {
+                    width: 100%;
+                }
+
+                .buttons {
+                    @include display(flex-start, center);
+                    gap: 10px;
+
+                    button {
+                        padding: 10px 25px;
+                        border: 1px solid white;
+                        background-image: -webkit-linear-gradient(0deg, #828fff 0%, #d496ff 100%);
+                        cursor: pointer;
+                        color: white;
+
+                        &:hover {
+                            background-image: none;
+                            background-color: white;
+                            color: black;
+                            transition: all 0.5s ease;
+                            border: 1px solid $light-purple ;
+                        }
+
+                    }
+                }
+
+                .text {
+                    width: 100%;
+                    @include display(flex-start, flex-start);
+                    flex-direction: column;
+                    gap: 15px;
+
+                    h3 {
+                        font-size: 20px;
+                    }
+
+                    p {
+                        color: $gray;
+                    }
+
+                    h4 {
+                        font-weight: 200;
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+footer {
+    width: 100%;
+    padding-top: 100px;
+    padding-bottom: 120px;
+    background-image: url(./robots\ image/footer-bg.jpg.webp);
+    @include image;
+    color: white;
+
+    a {
+        color: white;
+    }
+
+    .footer-center {
+        .top {
+            width: 100%;
+            @include display(space-between, flex-start);
+
+            .div1 {
+                ul li {
+                    padding-bottom: 10px;
+
+                    &:hover a {
+                        color: $back-color;
+                        transition: all 0.5s ease;
+                    }
+                }
+            }
+
+            .div2 {
+                p {
+                    padding-bottom: 20px;
+                }
+
+                .subscribe {
+                    @include display;
+                    gap: 20px;
+
+                    input {
+                        padding: 10px 100px 10px 20px;
+                        border: 1px solid white;
+                        border-radius: 9999px;
+                    }
+
+                    button {
+                        padding: 10px 25px;
+                        border: none;
+                        background-image: -webkit-linear-gradient(0deg, #828fff 0%, #d496ff 100%);
+                        cursor: pointer;
+                        color: white;
+                        border-radius: 9999px;
+
+                        &:hover {
+                            opacity: 0.9;
+                            transition: all 0.5s ease;
+                        }
+
+                        span {
+                            padding-left: 15px;
+                        }
+                    }
+                }
+            }
+            .div3 {
+                ul {
+                    display: grid;
+                    grid-template-columns: repeat(4, auto);
+                    gap: 10px;
+                }
+            }
+
+            h4 {
+                padding-bottom: 30px;
+                font-size: 20px;
+            }
+        }
+
+        .bottom {
+            width: 100%;
+            padding-top: 100px;
+            @include display(space-between, center);
+
+            span {
+                color: $back-color
+            }
+
+            .icons {
+                @include display;
+                gap: 10px;
+
+                i {
+                    cursor: pointer;
+                    padding: 10px 15px;
+                    background: black;
+
+                    &:hover {
+                        background-image: -webkit-linear-gradient(0deg, #828fff 0%, #d496ff 100%);
+                    }
+                }
             }
         }
     }
@@ -412,40 +594,62 @@ nav {
 
 
 
-.cardDetails{
+
+
+
+
+
+
+
+
+
+//-------------------- details.js----------
+.cardDetails {
     width: 100%;
     height: 100vh;
     padding-top: 200px;
     padding-bottom: 100px;
-    @include display(center , center);
+    @include display(center, center);
     gap: 100px;
-    img{
+
+    img {
         width: 150px;
     }
-    .bottom{
+
+    .bottom {
         @include display;
         flex-direction: column;
         gap: 50px;
-        h5{
+
+        h5 {
             font-size: 50px;
         }
-        p{
+
+        p {
             font-size: 30px;
         }
+
         button {
             padding: 15px 32px;
             font-weight: 500;
             background-image: -webkit-linear-gradient(0deg, #828fff 0%, #d496ff 100%);
-            border: none;
+            border: 1px solid white;
             cursor: pointer;
-            color: white;
+
+            a {
+                color: white;
+            }
 
             &:hover {
                 background-image: none;
                 background-color: white;
-                color: $light-purple;
                 transition: all 0.5s ease;
-                border: 1px solid $light-purple ;
+                border: 1px solid $light-purple;
+
+                a {
+                    color: $light-purple;
+
+                }
             }
         }
     }
@@ -485,17 +689,52 @@ nav {
         }
     }
 
-    #sec4 .sec4-center{
+    #sec4 .sec4-center {
         flex-direction: column;
-        .left{
+
+        .left {
             width: 100%;
         }
-        .right{
+
+        .right {
             width: 100%;
         }
     }
-    #pink .pink-center .bottom{
-        grid-template-columns: repeat(2 , auto);
+
+    #pink .pink-center .bottom {
+        grid-template-columns: repeat(2, auto);
+    }
+
+    footer .footer-center {
+        .top {
+            flex-direction: column;
+
+            .div2 {
+                padding: 60px 0px;
+
+                .subscribe {
+                    flex-direction: column;
+                    align-items: flex-start;
+                }
+            }
+
+            .row {
+                width: 100%;
+
+                input {
+                    width: 100%;
+                }
+            }
+        }
+
+        .bottom {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 30px;
+        }
+    }
+    .cardDetails{
+        flex-direction: column;
     }
 
 }
@@ -525,10 +764,6 @@ nav {
             width: 100%;
             @include display;
         }
-        
-        #pink .pink-center .bottom{
-            grid-template-columns: repeat(1, auto);
-        }
     }
 
     #products .products-center {
@@ -538,6 +773,14 @@ nav {
         .bottom {
             grid-template-columns: repeat(1, auto);
         }
+    }
+
+    #pink .pink-center .bottom {
+        grid-template-columns: repeat(1, auto);
+    }
+
+    #sec7 .sec7-center .bottom {
+        flex-direction: column;
     }
 }
 

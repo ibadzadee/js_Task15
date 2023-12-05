@@ -28,6 +28,7 @@ nav {
   padding: 20px 0px;
   position: fixed;
   z-index: 100;
+  transition: all 0.7s ease;
 }
 nav .nav-center {
   width: 100%;
@@ -82,7 +83,7 @@ nav .nav-center i {
 #banner .left button {
   padding: 12px 32px;
   font-weight: 500;
-  border: none;
+  border: 1px solid white;
   cursor: pointer;
   background-color: white;
 }
@@ -113,6 +114,7 @@ nav .nav-center i {
   gap: 100px;
 }
 #products .products-center .top {
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -120,8 +122,9 @@ nav .nav-center i {
   gap: 20px;
 }
 #products .products-center .top h2 {
-  font-size: 40px;
+  font-size: 2.5rem;
   font-weight: 500;
+  text-align: center;
 }
 #products .products-center .top p {
   color: #777777;
@@ -138,7 +141,7 @@ nav .nav-center i {
   align-items: center;
   flex-direction: column;
   text-align: center;
-  box-shadow: 0px 0px 50px 10px #f9f9ff;
+  box-shadow: 0px 0px 50px 20px #f9f9ff;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 }
@@ -154,19 +157,31 @@ nav .nav-center i {
   align-items: center;
   flex-direction: column;
   padding: 20px;
-  background-color: lightcyan;
+  background-color: #f9f9ff;
+}
+#products .products-center .bottom .card .bottom a {
+  color: black;
+  font-weight: 600;
+}
+#products .products-center .bottom .card .bottom h5 {
+  font-size: 20px;
+}
+#products .products-center .bottom .card .bottom p {
+  color: #777777;
 }
 #products .products-center .bottom .card .bottom button {
   padding: 12px 32px;
   font-weight: 500;
   background-color: white;
-  border: none;
+  border: 1px solid white;
   cursor: pointer;
 }
 #products .products-center .bottom .card .bottom button:hover {
   background-image: -webkit-linear-gradient(0deg, #828fff 0%, #d496ff 100%);
-  transition: all 0.4s ease;
+}
+#products .products-center .bottom .card .bottom button:hover a {
   color: white;
+  transition: all 0.4s ease;
 }
 
 #sec3 {
@@ -203,7 +218,7 @@ nav .nav-center i {
   padding: 12px 32px;
   font-weight: 500;
   background-image: -webkit-linear-gradient(0deg, #828fff 0%, #d496ff 100%);
-  border: none;
+  border: 1px solid white;
   cursor: pointer;
   color: white;
 }
@@ -247,7 +262,7 @@ nav .nav-center i {
   padding: 15px 32px;
   font-weight: 500;
   background-image: -webkit-linear-gradient(0deg, #828fff 0%, #d496ff 100%);
-  border: none;
+  border: 1px solid white;
   cursor: pointer;
   color: white;
 }
@@ -343,21 +358,28 @@ nav .nav-center i {
 #sec6 {
   width: 100%;
   padding: 100px 0px;
-  overflow-x: scroll;
 }
 #sec6 .sec6-center {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(5, auto);
-  gap: 50px;
 }
 #sec6 .sec6-center .imgs {
-  width: 19%;
+  width: 100%;
+}
+#sec6 .sec6-center .imgs img {
+  width: 60%;
+  filter: grayscale(100%);
+}
+#sec6 .sec6-center .imgs img:hover {
+  filter: grayscale(0%);
+  transition: all 0.4s ease;
 }
 
 #sec7 {
   width: 100%;
-  padding: 50px 0px;
+  padding-top: 50px;
+  padding-bottom: 100px;
 }
 #sec7 .sec7-center {
   width: 100%;
@@ -368,10 +390,154 @@ nav .nav-center i {
   align-items: center;
   flex-direction: column;
   gap: 20px;
+  padding-bottom: 50px;
 }
 #sec7 .sec7-center .top h2 {
   font-size: 40px;
   font-weight: 500;
+}
+#sec7 .sec7-center .bottom {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+#sec7 .sec7-center .bottom .cards {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 15px;
+}
+#sec7 .sec7-center .bottom .cards img {
+  width: 100%;
+}
+#sec7 .sec7-center .bottom .cards .buttons {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+}
+#sec7 .sec7-center .bottom .cards .buttons button {
+  padding: 10px 25px;
+  border: 1px solid white;
+  background-image: -webkit-linear-gradient(0deg, #828fff 0%, #d496ff 100%);
+  cursor: pointer;
+  color: white;
+}
+#sec7 .sec7-center .bottom .cards .buttons button:hover {
+  background-image: none;
+  background-color: white;
+  color: black;
+  transition: all 0.5s ease;
+  border: 1px solid #d496ff;
+}
+#sec7 .sec7-center .bottom .cards .text {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 15px;
+}
+#sec7 .sec7-center .bottom .cards .text h3 {
+  font-size: 20px;
+}
+#sec7 .sec7-center .bottom .cards .text p {
+  color: #777777;
+}
+#sec7 .sec7-center .bottom .cards .text h4 {
+  font-weight: 200;
+}
+
+footer {
+  width: 100%;
+  padding-top: 100px;
+  padding-bottom: 120px;
+  background-image: url(./robots\ image/footer-bg.jpg.webp);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+}
+footer a {
+  color: white;
+}
+footer .footer-center .top {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+footer .footer-center .top .div1 ul li {
+  padding-bottom: 10px;
+}
+footer .footer-center .top .div1 ul li:hover a {
+  color: #8a90ff;
+  transition: all 0.5s ease;
+}
+footer .footer-center .top .div2 p {
+  padding-bottom: 20px;
+}
+footer .footer-center .top .div2 .subscribe {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+footer .footer-center .top .div2 .subscribe input {
+  padding: 10px 100px 10px 20px;
+  border: 1px solid white;
+  border-radius: 9999px;
+}
+footer .footer-center .top .div2 .subscribe button {
+  padding: 10px 25px;
+  border: none;
+  background-image: -webkit-linear-gradient(0deg, #828fff 0%, #d496ff 100%);
+  cursor: pointer;
+  color: white;
+  border-radius: 9999px;
+}
+footer .footer-center .top .div2 .subscribe button:hover {
+  opacity: 0.9;
+  transition: all 0.5s ease;
+}
+footer .footer-center .top .div2 .subscribe button span {
+  padding-left: 15px;
+}
+footer .footer-center .top .div3 ul {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  gap: 10px;
+}
+footer .footer-center .top h4 {
+  padding-bottom: 30px;
+  font-size: 20px;
+}
+footer .footer-center .bottom {
+  width: 100%;
+  padding-top: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer .footer-center .bottom span {
+  color: #8a90ff;
+}
+footer .footer-center .bottom .icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+footer .footer-center .bottom .icons i {
+  cursor: pointer;
+  padding: 10px 15px;
+  background: black;
+}
+footer .footer-center .bottom .icons i:hover {
+  background-image: -webkit-linear-gradient(0deg, #828fff 0%, #d496ff 100%);
 }
 
 .cardDetails {
@@ -404,16 +570,20 @@ nav .nav-center i {
   padding: 15px 32px;
   font-weight: 500;
   background-image: -webkit-linear-gradient(0deg, #828fff 0%, #d496ff 100%);
-  border: none;
+  border: 1px solid white;
   cursor: pointer;
+}
+.cardDetails .bottom button a {
   color: white;
 }
 .cardDetails .bottom button:hover {
   background-image: none;
   background-color: white;
-  color: #d496ff;
   transition: all 0.5s ease;
   border: 1px solid #d496ff;
+}
+.cardDetails .bottom button:hover a {
+  color: #d496ff;
 }
 
 @media screen and (max-width: 992px) {
@@ -447,6 +617,30 @@ nav .nav-center i {
   #pink .pink-center .bottom {
     grid-template-columns: repeat(2, auto);
   }
+  footer .footer-center .top {
+    flex-direction: column;
+  }
+  footer .footer-center .top .div2 {
+    padding: 60px 0px;
+  }
+  footer .footer-center .top .div2 .subscribe {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  footer .footer-center .top .row {
+    width: 100%;
+  }
+  footer .footer-center .top .row input {
+    width: 100%;
+  }
+  footer .footer-center .bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+  }
+  .cardDetails {
+    flex-direction: column;
+  }
 }
 @media screen and (max-width: 961px) {
   nav .nav-center .menu {
@@ -469,14 +663,17 @@ nav .nav-center i {
     justify-content: center;
     align-items: center;
   }
-  #banner .banner-center #pink .pink-center .bottom {
-    grid-template-columns: repeat(1, auto);
-  }
   #products .products-center {
     margin: 0 auto;
     width: 80%;
   }
   #products .products-center .bottom {
     grid-template-columns: repeat(1, auto);
+  }
+  #pink .pink-center .bottom {
+    grid-template-columns: repeat(1, auto);
+  }
+  #sec7 .sec7-center .bottom {
+    flex-direction: column;
   }
 }/*# sourceMappingURL=style.css.map */
