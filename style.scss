@@ -68,7 +68,7 @@ nav {
 
 #banner {
     width: 100%;
-    background-image: url(./banner-bg.jpg.webp);
+    background-image: url(./robots\ image/banner-bg.jpg.webp);
     padding: 190px 0px;
     // height: 100vh;
     @include image;
@@ -171,7 +171,7 @@ nav {
                     @include display;
                     flex-direction: column;
                     padding: 20px;
-                    background-color: $light-white;
+                    background-color: lightcyan;
 
                     button {
                         padding: 12px 32px;
@@ -290,7 +290,7 @@ nav {
         .right {
             width: 54%;
             height: 330px;
-            background-image: url(./video-bg.jpg.webp);
+            background-image: url(./robots\ image/video-bg.jpg.webp);
 
             .after {
                 width: 100%;
@@ -312,7 +312,7 @@ nav {
 #pink {
     width: 100%;
     padding: 100px 0px;
-    background-image: url(./pink-bg.jpg);
+    background-image: url(./robots\ image/pink-bg.jpg);
 
     // @include display;
     .pink-center {
@@ -377,12 +377,13 @@ nav {
 #sec6 {
     width: 100%;
     padding: 100px 0px;
+    overflow-x: scroll;
 
     .sec6-center {
         width: 100%;
         display: grid;
         grid-template-columns: repeat(5, auto);
-
+        gap: 50px;
         .imgs {
             width: 19%;
         }
@@ -411,6 +412,44 @@ nav {
 
 
 
+.cardDetails{
+    width: 100%;
+    height: 100vh;
+    padding-top: 200px;
+    padding-bottom: 100px;
+    @include display(center , center);
+    gap: 100px;
+    img{
+        width: 150px;
+    }
+    .bottom{
+        @include display;
+        flex-direction: column;
+        gap: 50px;
+        h5{
+            font-size: 50px;
+        }
+        p{
+            font-size: 30px;
+        }
+        button {
+            padding: 15px 32px;
+            font-weight: 500;
+            background-image: -webkit-linear-gradient(0deg, #828fff 0%, #d496ff 100%);
+            border: none;
+            cursor: pointer;
+            color: white;
+
+            &:hover {
+                background-image: none;
+                background-color: white;
+                color: $light-purple;
+                transition: all 0.5s ease;
+                border: 1px solid $light-purple ;
+            }
+        }
+    }
+}
 
 
 

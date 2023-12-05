@@ -52,7 +52,7 @@ nav .nav-center i {
 
 #banner {
   width: 100%;
-  background-image: url(./banner-bg.jpg.webp);
+  background-image: url(./robots\ image/banner-bg.jpg.webp);
   padding: 190px 0px;
   background-size: cover;
   background-position: center;
@@ -154,7 +154,7 @@ nav .nav-center i {
   align-items: center;
   flex-direction: column;
   padding: 20px;
-  background-color: #f9f9ff;
+  background-color: lightcyan;
 }
 #products .products-center .bottom .card .bottom button {
   padding: 12px 32px;
@@ -261,7 +261,7 @@ nav .nav-center i {
 #sec4 .sec4-center .right {
   width: 54%;
   height: 330px;
-  background-image: url(./video-bg.jpg.webp);
+  background-image: url(./robots\ image/video-bg.jpg.webp);
 }
 #sec4 .sec4-center .right .after {
   width: 100%;
@@ -281,7 +281,7 @@ nav .nav-center i {
 #pink {
   width: 100%;
   padding: 100px 0px;
-  background-image: url(./pink-bg.jpg);
+  background-image: url(./robots\ image/pink-bg.jpg);
 }
 #pink .pink-center {
   width: 100%;
@@ -343,11 +343,13 @@ nav .nav-center i {
 #sec6 {
   width: 100%;
   padding: 100px 0px;
+  overflow-x: scroll;
 }
 #sec6 .sec6-center {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(5, auto);
+  gap: 50px;
 }
 #sec6 .sec6-center .imgs {
   width: 19%;
@@ -370,6 +372,48 @@ nav .nav-center i {
 #sec7 .sec7-center .top h2 {
   font-size: 40px;
   font-weight: 500;
+}
+
+.cardDetails {
+  width: 100%;
+  height: 100vh;
+  padding-top: 200px;
+  padding-bottom: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+}
+.cardDetails img {
+  width: 150px;
+}
+.cardDetails .bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 50px;
+}
+.cardDetails .bottom h5 {
+  font-size: 50px;
+}
+.cardDetails .bottom p {
+  font-size: 30px;
+}
+.cardDetails .bottom button {
+  padding: 15px 32px;
+  font-weight: 500;
+  background-image: -webkit-linear-gradient(0deg, #828fff 0%, #d496ff 100%);
+  border: none;
+  cursor: pointer;
+  color: white;
+}
+.cardDetails .bottom button:hover {
+  background-image: none;
+  background-color: white;
+  color: #d496ff;
+  transition: all 0.5s ease;
+  border: 1px solid #d496ff;
 }
 
 @media screen and (max-width: 992px) {
