@@ -20,7 +20,7 @@
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0px 30px;
+  padding: 0px 50px;
 }
 
 nav {
@@ -133,7 +133,6 @@ nav .nav-center i {
   gap: 30px;
 }
 #products .products-center .bottom .card {
-  background-color: #f9f9ff;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -145,7 +144,7 @@ nav .nav-center i {
 }
 #products .products-center .bottom .card img {
   background-color: white;
-  padding: 50px 86px;
+  padding: 50px 0px;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 }
@@ -155,6 +154,7 @@ nav .nav-center i {
   align-items: center;
   flex-direction: column;
   padding: 20px;
+  background-color: #f9f9ff;
 }
 #products .products-center .bottom .card .bottom button {
   padding: 12px 32px;
@@ -307,7 +307,6 @@ nav .nav-center i {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(3, auto);
-  grid-template-rows: repeat(2, auto);
   gap: 30px;
 }
 #pink .pink-center .bottom .card {
@@ -373,6 +372,38 @@ nav .nav-center i {
   font-weight: 500;
 }
 
+@media screen and (max-width: 992px) {
+  #products .products-center {
+    width: 90%;
+  }
+  #products .products-center .bottom {
+    grid-template-columns: repeat(2, auto);
+  }
+  #sec3 {
+    flex-direction: column;
+  }
+  #sec3 .left {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  #sec3 .right {
+    width: 100%;
+    padding: 20px;
+  }
+  #sec4 .sec4-center {
+    flex-direction: column;
+  }
+  #sec4 .sec4-center .left {
+    width: 100%;
+  }
+  #sec4 .sec4-center .right {
+    width: 100%;
+  }
+  #pink .pink-center .bottom {
+    grid-template-columns: repeat(2, auto);
+  }
+}
 @media screen and (max-width: 961px) {
   nav .nav-center .menu {
     display: none;
@@ -393,5 +424,15 @@ nav .nav-center i {
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+  #banner .banner-center #pink .pink-center .bottom {
+    grid-template-columns: repeat(1, auto);
+  }
+  #products .products-center {
+    margin: 0 auto;
+    width: 80%;
+  }
+  #products .products-center .bottom {
+    grid-template-columns: repeat(1, auto);
   }
 }/*# sourceMappingURL=style.css.map */

@@ -25,7 +25,7 @@
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0px 30px;
+    padding: 0px 50px;
 }
 
 nav {
@@ -152,7 +152,6 @@ nav {
             gap: 30px;
 
             .card {
-                background-color: $light-white;
                 @include display(center, center);
                 flex-direction: column;
                 text-align: center;
@@ -162,7 +161,7 @@ nav {
 
                 img {
                     background-color: white;
-                    padding: 50px 86px;
+                    padding: 50px 0px;
                     border-top-left-radius: 20px;
                     border-top-right-radius: 20px;
                     // width: 100%;
@@ -172,6 +171,7 @@ nav {
                     @include display;
                     flex-direction: column;
                     padding: 20px;
+                    background-color: $light-white;
 
                     button {
                         padding: 12px 32px;
@@ -249,6 +249,7 @@ nav {
         width: 100%;
         @include display(space-between, center);
         gap: 20px;
+        // margin:  0 auto;
 
         .left {
             width: 40%;
@@ -336,7 +337,7 @@ nav {
             width: 100%;
             display: grid;
             grid-template-columns: repeat(3, auto);
-            grid-template-rows: repeat(2, auto);
+            // grid-template-rows: repeat(2, auto);
             gap: 30px;
 
             .card {
@@ -411,6 +412,56 @@ nav {
 
 
 
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:992px) {
+    #products .products-center {
+        width: 90%;
+
+        .bottom {
+            grid-template-columns: repeat(2, auto);
+        }
+    }
+
+    #sec3 {
+        flex-direction: column;
+
+        .left {
+            width: 100%;
+            max-width: 100%;
+            margin: 0 auto;
+        }
+
+        .right {
+            width: 100%;
+            padding: 20px;
+        }
+    }
+
+    #sec4 .sec4-center{
+        flex-direction: column;
+        .left{
+            width: 100%;
+        }
+        .right{
+            width: 100%;
+        }
+    }
+    #pink .pink-center .bottom{
+        grid-template-columns: repeat(2 , auto);
+    }
+
+}
+
+
 @media screen and (max-width:961px) {
     nav .nav-center {
         .menu {
@@ -434,6 +485,19 @@ nav {
         .right {
             width: 100%;
             @include display;
+        }
+        
+        #pink .pink-center .bottom{
+            grid-template-columns: repeat(1 , auto);
+        }
+    }
+
+    #products .products-center {
+        margin: 0 auto;
+        width: 80%;
+
+        .bottom {
+            grid-template-columns: repeat(1, auto);
         }
     }
 }
