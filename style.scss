@@ -593,8 +593,39 @@ footer {
 }
 
 
-
-
+// add.html
+.form{
+    width: 100%;
+    padding: 150px 0px;
+    // height: 100vh;
+    @include display;
+    // flex-direction: column;
+    margin:  0 auto;
+    .form-center{
+        // width: 50%;
+        background-color: antiquewhite;
+        @include display(flex-start, flex-start);
+        flex-direction: column;
+        padding: 100px;
+        border-radius: 20px;
+        box-shadow: 0 0 20px black;
+        input{
+            width: 100%;
+            padding: 10px 20px;
+            margin-bottom: 20px;
+            // @include display(flex-start , flex-start);
+        }
+        #submit{
+            background-color: blue;
+            color: white;
+            cursor: pointer;
+            &:hover{
+                opacity: 0.8;
+                transition: all 0.5s ease;
+            }
+        }
+    }
+}
 
 
 

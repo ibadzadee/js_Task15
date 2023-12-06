@@ -11,11 +11,20 @@ fetch('http://localhost:3000/robots')
                 <h5>${element.name}</h5>
                 <p>${element.description}</p>
                 <button><a href = "./details.html?id=${element.id}">VIEW DETAILS </a></button>
+                <button onclick="deleteRobot(${element.id})">DELETE</button>
             </div>
         </div> 
         `
         })
     })
+
+function deleteRobot(id){
+    // console.log(id);
+    axios.delete(`http://localhost:3000/robots/${id}`)
+    window.location.reload()
+}
+
+
 
 let nav = document.querySelector("nav")
 window.addEventListener("scroll" , ()=>{

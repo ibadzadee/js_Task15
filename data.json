@@ -1,28 +1,28 @@
 {
-    "robots": [
-        {
-            "id":1,
-            "image" : "./robots image/p1.png",
-            "name" : " The Upper Eye",
-            "description" : "Who are in extremely love with eco friendly system."
-        },
-        {
-            "id":2,
-            "image" : "./robots image/p2.png.webp",
-            "name" : " The Crab Wheel",
-            "description" : "Who are in extremely love with eco friendly system."
-        },
-        {
-            "id":3,
-            "image" : "./robots image/p3.png.webp",
-            "name" : " The Plug Ninja",
-            "description" : "Who are in extremely love with eco friendly system."
-        },
-        {
-            "id":4,
-            "image" : "./robots image/p4.png.webp",
-            "name" : " The Controller",
-            "description" : "Who are in extremely love with eco friendly system."
-        }
-    ]
+  "robots": [
+    {
+      "id": 1,
+      "image": "./robots image/p1.png",
+      "name": " The Upper Eye",
+      "description": "Who are in extremely love with eco friendly system."
+    },
+    {
+      "id": 2,
+      "image": "./robots image/p2.png.webp",
+      "name": " The Crab Wheel",
+      "description": "Who are in extremely love with eco friendly system."
+    },
+    {
+      "id": 3,
+      "image": "./robots image/p3.png.webp",
+      "name": " The Plug Ninja",
+      "description": "Who are in extremely love with eco friendly system."
+    },
+    {
+      "id": 4,
+      "image": "./robots image/p4.png.webp",
+      "name": " The Controller",
+      "description": "Who are in extremely love with eco friendly system."
+    }
+  ]
 }
