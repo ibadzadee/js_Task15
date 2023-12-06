@@ -18,7 +18,7 @@ fetch('http://localhost:3000/robots')
         })
     })
 
-function deleteRobot(id){
+function deleteRobot(id) {
     // console.log(id);
     axios.delete(`http://localhost:3000/robots/${id}`)
     window.location.reload()
@@ -27,15 +27,60 @@ function deleteRobot(id){
 
 
 let nav = document.querySelector("nav")
-window.addEventListener("scroll" , ()=>{
-    if(window.scrollY >100){
+window.addEventListener("scroll", () => {
+    if (window.scrollY > 100) {
         nav.style.background = "#8a90ff"
         nav.style.opacity = ".9"
         nav.style.padding = "10px 0px"
     }
-    else{
+    else {
         nav.style.background = ""
         nav.style.opacity = ""
         nav.style.padding = "20px 0px"
     }
 })
+
+// ---mobile-nav---
+const menu = document.querySelector("nav #menu")
+const mobileNav = document.querySelector("#mobile-nav")
+const mobileNavBody = document.querySelector("#mobile-nav-body")
+const exit = document.querySelector(".exit")
+
+menu.addEventListener("click", () => {
+    mobileNav.style.display = "block"
+    mobileNavBody.style.display = "block"
+    exit.style.display = "block"
+})
+
+exit.addEventListener("click", () => {
+    mobileNav.style.display = ""
+    mobileNavBody.style.display = ""
+    exit.style.display = ""
+})
+mobileNavBody.addEventListener("click" , ()=>{
+    mobileNav.style.display = ""
+    mobileNavBody.style.display = ""
+    exit.style.display = ""
+})
+
+
+// ------- from end to top button ------
+
+let topBtn = document.querySelector('#top-button')
+
+window.addEventListener("scroll", () => {
+    if (window.scrollY > 50) {
+        topBtn.style.display ="block"
+    }
+    else {
+        topBtn.style.display =""
+    }
+})
+
+
+topBtn.addEventListener('click', function() {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });

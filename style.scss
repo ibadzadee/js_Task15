@@ -48,6 +48,9 @@ nav {
                 a {
                     font-size: 13px;
                     color: white;
+                    &:hover{
+                        opacity: 0.7;
+                    }
                 }
             }
 
@@ -57,6 +60,7 @@ nav {
             font-size: 30px;
             color: white;
             display: none;
+            cursor: pointer;
         }
     }
 }
@@ -336,6 +340,7 @@ nav {
             flex-direction: column;
             gap: 20px;
             color: white;
+            text-align: center;
 
             h2 {
                 font-size: 40px;
@@ -422,6 +427,7 @@ nav {
             flex-direction: column;
             gap: 20px;
             padding-bottom: 50px;
+            text-align: center;
 
             h2 {
                 font-size: 40px;
@@ -551,6 +557,7 @@ footer {
                     }
                 }
             }
+
             .div3 {
                 ul {
                     display: grid;
@@ -594,14 +601,15 @@ footer {
 
 
 // add.html
-.form{
+.form {
     width: 100%;
     padding: 150px 0px;
     // height: 100vh;
     @include display;
     // flex-direction: column;
-    margin:  0 auto;
-    .form-center{
+    margin: 0 auto;
+
+    .form-center {
         // width: 50%;
         background-color: antiquewhite;
         @include display(flex-start, flex-start);
@@ -609,17 +617,20 @@ footer {
         padding: 100px;
         border-radius: 20px;
         box-shadow: 0 0 20px black;
-        input{
+
+        input {
             width: 100%;
             padding: 10px 20px;
             margin-bottom: 20px;
             // @include display(flex-start , flex-start);
         }
-        #submit{
+
+        #submit {
             background-color: blue;
             color: white;
             cursor: pointer;
-            &:hover{
+
+            &:hover {
                 opacity: 0.8;
                 transition: all 0.5s ease;
             }
@@ -687,8 +698,83 @@ footer {
 }
 
 
+// --------------------------------mobile-nav-----------
+#mobile-nav-body {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 995;
+    display: none;
+    transition: 0.5s;
+}
 
+#mobile-nav {
+    position: fixed;
+    top: 0;
+    padding-top: 18px;
+    bottom: 0;
+    z-index: 998;
+    background: rgba(0, 0, 0, 0.8);
+    left: -260px;
+    width: 260px;
+    overflow-y: auto;
+    transition: 0.5s;
+    left: 0;
+    display: none;
 
+    ul {
+        @include display(center, flex-start);
+        flex-direction: column;
+        gap: 30px;
+        padding: 20px;
+
+        a {
+            color: white;
+            font-weight: 900;
+            &:hover{
+                opacity: 0.3;
+            }
+        }
+    }
+}
+.exit{
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    color: white;
+    z-index: 998;
+    font-size: 45px;
+    cursor: pointer;
+    display: none;
+}
+
+// --------------  from end to top button-----------
+
+#top-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: $light-purple ;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 18px;
+    align-items: center;
+    justify-content: center;
+    display:  none;
+    z-index: 9999px;
+  }
+  
+  #top-button:hover {
+    opacity: 0.7;
+  }
+  
 
 
 
@@ -764,7 +850,8 @@ footer {
             gap: 30px;
         }
     }
-    .cardDetails{
+
+    .cardDetails {
         flex-direction: column;
     }
 
