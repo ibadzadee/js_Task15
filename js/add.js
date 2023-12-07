@@ -35,3 +35,27 @@ window.addEventListener("scroll", () => {
         nav.style.padding = "20px 0px"
     }
 })
+
+
+// // ---mobile nav----
+// const menu = document.querySelector("nav #menu")
+// const mobileNav = document.querySelector("#mobile-nav")
+// const mobileNavBody = document.querySelector("#mobile-nav-body")
+// const exit = document.querySelector(".exit")
+
+// menu.addEventListener("click", () => {
+//     mobileNav.style.display = "block"
+//     mobileNavBody.style.display = "block"
+//     exit.style.display = "block"
+// })
+
+// exit.addEventListener("click", () => {
+//     mobileNav.style.display = ""
+//     mobileNavBody.style.display = ""
+//     exit.style.display = ""
+// })
+// mobileNavBody.addEventListener("click", () => {
+//     mobileNav.style.display = ""
+//     mobileNavBody.style.display = ""
+//     exit.style.display = ""
+// })
