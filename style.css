@@ -154,6 +154,7 @@ nav .nav-center i {
   padding: 50px 0px;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
+  width: 45%;
 }
 #products .products-center .bottom .card .bottom {
   display: flex;
@@ -186,6 +187,14 @@ nav .nav-center i {
 #products .products-center .bottom .card .bottom button:hover a {
   color: white;
   transition: all 0.4s ease;
+}
+#products .products-center #loadMore {
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: darkblue;
+  color: white;
+  font-size: 700;
+  border: none;
 }
 
 #sec3 {
@@ -555,6 +564,7 @@ footer .footer-center .bottom .icons i:hover {
   margin: 0 auto;
 }
 .form .form-center {
+  width: 50%;
   background-color: antiquewhite;
   display: flex;
   justify-content: flex-start;

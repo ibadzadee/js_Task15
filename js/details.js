@@ -5,7 +5,7 @@ let element = document.querySelector(".element")
 fetch(`http://localhost:3000/robots/${id}`)
     .then(reponse => reponse.json())
     .then(data => {
-        element.innerHTML += `
+        element.innerHTML+= `
         <div class="card cardDetails">
         <img src="${data.image}" alt="">
             <div class="bottom">

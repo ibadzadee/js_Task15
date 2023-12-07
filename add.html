@@ -17,7 +17,7 @@
 </head>
 
 <body>
-    <nav>
+    <nav style="background-color: #8a90ff;">
         <div class="container">
             <div class="nav-center">
                 <div class="logo">
@@ -42,16 +42,18 @@
 
     <div class="form">
         <div class="form-center">
-            <label for="">Image:</label>
-            <input type="file" placeholder="choose file" id="img">
+            <form class="formFile" action="">
+                <label for="">Image:</label>
+                <input type="file" placeholder="choose file" id="img">
 
-            <label for="">Name:</label>
-            <input type="name" name="name" placeholder="Name:" id="name">
+                <label for="">Name:</label>
+                <input type="name" name="name" placeholder="Name:" id="name">
 
-            <label for="">Category:</label>
-            <input type="details" name="details" placeholder="Details:" id="category">
+                <label for="">Category:</label>
+                <input type="details" name="details" placeholder="Details:" id="category">
 
-            <input type="submit" name="submit" id="submit">
+                <input type="submit" name="submit" id="submit">
+            </form>
 
         </div>
     </div>
@@ -108,24 +110,23 @@
     </footer>
 
 
-        <!-- mobile-nav -->
-        <section id="mobile-nav-body"></section>
-        <div id="mobile-nav">
-            <ul>
-                <li><a href="index.html">HOME</a></li>
-                <li><a href="">ABOUT US</a></li>
-                <li><a href="">SERVICES</a></li>
-                <li><a href="#products">PRODUCTS</a></li>
-                <li><a href="#sec7">BLOG</a></li>
-                <li><a href="">CONTACT</a></li>
-                <li><a href="">DROPDOWN</a></li>
-            </ul>
-        </div>
-        <div class="exit"><i id="exit"class="bi bi-x"></i></div>
-
-        <script src="./js/add.js"></script>
-        <script src="./js/details.js"></script>
-        <script src="./js/script.js"></script>
+    <!-- mobile-nav -->
+    <section id="mobile-nav-body"></section>
+    <div id="mobile-nav">
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="">ABOUT US</a></li>
+            <li><a href="">SERVICES</a></li>
+            <li><a href="#products">PRODUCTS</a></li>
+            <li><a href="#sec7">BLOG</a></li>
+            <li><a href="">CONTACT</a></li>
+            <li><a href="">DROPDOWN</a></li>
+        </ul>
+    </div>
+    <div class="exit"><i id="exit" class="bi bi-x"></i></div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./js/add.js"></script>
 
 </body>
 
