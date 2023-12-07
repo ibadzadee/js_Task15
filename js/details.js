@@ -16,3 +16,18 @@ fetch(`http://localhost:3000/robots/${id}`)
         </div> 
         `
 })
+
+let nav = document.querySelector("nav")
+nav.style.background = "#8a90ff"
+window.addEventListener("scroll" , ()=>{
+    if(window.scrollY >100){
+        nav.style.background = "#8a90ff"
+        nav.style.opacity = ".9"
+        nav.style.padding = "10px 0px"
+    }
+    else{
+        nav.style.background = "#8a90ff"
+        nav.style.opacity = ""
+        nav.style.padding = ""
+    }
+})
