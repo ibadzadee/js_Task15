@@ -79,8 +79,8 @@ window.addEventListener("scroll", () => {
 
 
 topBtn.addEventListener('click', function() {
-    window.scrollTo({
+    window.scroll({
       top: 0,
-      behavior: 'smooth'
+      behavior: "smooth",
     });
   });
